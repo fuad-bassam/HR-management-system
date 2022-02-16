@@ -1,6 +1,7 @@
 'use strict';
 
 const listOfEmployee=[];
+
 function employeeInformation(employeeID, fullName, department, level, personalImageURL) {
 
     this.employeeID = employeeID;
@@ -29,7 +30,7 @@ employeeInformation.prototype.salaryNumber = function () {
         min = 1500;
         max = 2000;
     } else {
-        var levelPrompt = prompt("Please enter your level").toLowerCase;
+        var levelPrompt = prompt("Please enter your level").toLowerCase();
         this.level = levelPrompt;
         this.salaryNumber();
     }
@@ -39,46 +40,52 @@ employeeInformation.prototype.salaryNumber = function () {
  this.salary = salaryWithoutTax - salaryWithoutTax * 0.075 ;
 
 }
-let Ghazi_Samer = new employeeInformation (1000 ,"Ghazi Samer" , "Administration ", "Senior" ,"URL");
-let Lana_Ali = new employeeInformation (1001 ,"Lana Ali" , "Finance ", "Senior" ,"URL");
-let Tamara_Ayoub = new employeeInformation (1002 ,"Tamara Ayoub" , "Marketing ", "Senior" ,"URL");
-let Safi_Walid = new employeeInformation (1002 ,"Safi Walid" , "Administration ", "Mid-Senior" ,"URL");
-let Omar_Zaid = new employeeInformation (1004 ,"Omar Zaid" , "Development ", "Senior" ,"URL");
-let Rana_Saleh = new employeeInformation (1005 ,"Rana Saleh" , "Development ", "Junior" ,"URL");
-let Hadi_Ahmad = new employeeInformation (1006 ,"Hadi Ahmad" , "Finance ", "Mid-Senior" ,"URL");
+
+let Ghazi_Samer = new employeeInformation (1000 ,"Ghazi Samer" , "Administration ", "senior" ,"URL");
+let Lana_Ali = new employeeInformation (1001 ,"Lana Ali" , "Finance ", "senior" ,"URL");
+let Tamara_Ayoub = new employeeInformation (1002 ,"Tamara Ayoub" , "Marketing ", "senior" ,"URL");
+let Safi_Walid = new employeeInformation (1002 ,"Safi Walid" , "Administration ", "mid-senior" ,"URL");
+let Omar_Zaid = new employeeInformation (1004 ,"Omar Zaid" , "Development ", "senior" ,"URL");
+let Rana_Saleh = new employeeInformation (1005 ,"Rana Saleh" , "Development ", "junior" ,"URL");
+let Hadi_Ahmad = new employeeInformation (1006 ,"Hadi Ahmad" , "Finance ", "mid-senior" ,"URL");
 
 // Ghazi_Samer.
 
+let main1=document.getElementById("mainBody");
+main1.textContent = "dddddddd";
+employeeInformation.prototype.render1 = function () {
 
-    let main1=document.getElementById("mainBody");
+
+    // document.write(`<h2 style ="margin-bottom : 0px ; color: rgb(62, 6, 114) ; ">${this.fullName}: ${this.salary}</h2>`);
+    
+            // listOfEmployee[x].salaryNumber();
+            // listOfEmployee[x].render();
+    
+        let employeeName = document.createElement("h2")
+        let employeeSalary =document.createElement("h3")
+        
+        employeeName.textContent=this.fullName
+        employeeSalary.textContent =this.salary
+
+       main1.appendChild(employeeName);
+       main1.appendChild(employeeSalary);
+    
+       }
+
+      
+   
     // let main1=document.getElementsByTagName("main") 
- console.log(listOfEmployee);
-    for(let x;x<listOfEmployee.length;x++){
+//  console.log(listOfEmployee);
+    for(let x=0;x<listOfEmployee.length;x++){
+        console.log(listOfEmployee[x]);
         
 //         // document.write(`<h2 style ="margin-bottom : 0px ; color: rgb(62, 6, 114) ; ">${this.fullName}: ${this.salary}</h2>`);
 //         listOfEmployee[x].getSalary();
 //         listOfEmployee[x].render();
 // };
-listOfEmployee[x].salaryNumber;
-listOfEmployee[x].render1;
 
+listOfEmployee[x].salaryNumber();
+listOfEmployee[x].render1();
+console.log(listOfEmployee[x]);
  }
  
-employeeInformation.prototype.render1 = function () {
-
-
-
-
-document.write(`<h2 style ="margin-bottom : 0px ; color: rgb(62, 6, 114) ; ">${this.fullName}: ${this.salary}</h2>`);
-        listOfEmployee[x].getSalary();
-        listOfEmployee[x].render();
-
-    let employeeName = document.createElement("h2")
-    let employeeSalary =document.createElement("h3")
-    
-    employeeName.textContent=listOfEmployee[x].fullName
-    employeeSalary.textContent =listOfEmployee[x].salary
-   main1.appendChild(employeeName);
-   main1.appendChild(employeeSalary);
-
-   }
