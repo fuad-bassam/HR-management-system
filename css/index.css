@@ -40,7 +40,77 @@ nav a:hover, a:active {
    text-transform:uppercase;
     color: #000;
     }
+  /* main item */
+  
+  
+  
+  legend{
+        text-align: center;
+    }
 
+    input[type=text], select {
+      width: 300px;
+      padding: 9px;
+      margin: 6px;
+      position:inherit;
+     
+  }
+  
+  input[type=submit] {
+      width: 120px;
+      background-color: #522752;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .div1 {
+    
+ 
+    width:800px; 
+    margin:0 auto;
+    margin: auto;
+    text-align: center;
+
+       
+    }
+    
+    
+  
+  
+    fieldset{
+      width: 50%;
+      height: 340px;
+      margin:auto ;
+     
+          border: solid 2px gold ;
+
+    
+          display:inline-block;
+          
+      margin-left:40px;
+          float: none;   
+      
+  }
+.divs{
+  display:inline-block;
+  text-align: center;
+
+
+}
+   
+  
+    
+  
+  
+    .output{
+        width: 400px;
+        height: 400px;
+      
+    }
     /* footer item */
 #footerId{ color: rgb(241, 234, 237);
 
