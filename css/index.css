@@ -48,6 +48,12 @@ nav a:hover, a:active {
         text-align: center;
     }
 
+    .fInput{
+align-self: center;
+
+
+
+    }
     input[type=text], select {
       width: 300px;
       padding: 9px;
@@ -82,7 +88,7 @@ nav a:hover, a:active {
   
   
     fieldset{
-      width: 50%;
+      width:56%;
       height: 340px;
       margin:auto ;
      
@@ -95,17 +101,7 @@ nav a:hover, a:active {
           float: none;   
       
   }
-.divs{
-  display:inline-block;
-  text-align: center;
 
-
-}
-   
-  
-    
-  
-  
     .output{
         width: 400px;
         height: 400px;
