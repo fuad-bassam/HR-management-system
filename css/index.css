@@ -34,7 +34,7 @@ margin-left:40px;
 
 } 
 
-nav a:hover, a:active {
+nav a:hover, a:active  {
     background-color: #19d4ec;
     transform: 1s ;
    text-transform:uppercase;
@@ -46,6 +46,7 @@ nav a:hover, a:active {
   
   legend{
         text-align: center;
+        font-family: 'Redressed', cursive;
     }
 
     .fInput{
@@ -57,22 +58,55 @@ align-self: center;
     input[type=text], select {
       width: 300px;
       padding: 9px;
-      margin: 6px;
+      margin: 14px 6px;
       position:inherit;
      
   }
   
-  input[type=submit] {
-      width: 120px;
-      background-color: #522752;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      
+  #submitt {
+    width: 120px;
+    background-color: #000000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+cursor: pointer;
+
+      width: 125px;
+      margin-left: auto;
+      margin-right: auto;
       border-radius: 4px;
-      cursor: pointer;
+      
     }
-  
+  #submitt:hover{
+
+    background-color: #19d4ec;
+    transform: 1s ;
+   text-transform:uppercase;
+    color: #000;
+
+
+  } 
+
+ .divToShow{
+
+font-family:'Redressed', cursive;
+ border :solid 2px black;
+  width:300px;
+  align-items:center;
+  background-color: #fbd324 ;
+  padding: 12px;
+  border-radius: 7%;
+  margin: 20px;
+
+  }
+
+  .imgDivToShow{
+    width :123px;
+    height : 123px;
+    margin-left :80px;
+  }
+
+
     .div1 {
     
  
@@ -85,7 +119,6 @@ align-self: center;
     }
     
     
-  
   
     fieldset{
       width:56%;
@@ -103,10 +136,15 @@ align-self: center;
   }
 
     .output{
-        width: 400px;
-        height: 400px;
-      
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-wrap: wrap;
     }
+
+
+
+
     /* footer item */
 #footerId{ color: rgb(241, 234, 237);
 
