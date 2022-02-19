@@ -41,15 +41,44 @@ nav a{
         color: #000;
         }
     /* main item */
+
+    table{
+text-align: center;
+margin-left: 35%;
+
+margin-top: 70px;
+
+    }
+th{
+
+  size: 46px;
+  font-family: 'Redressed', cursive;
+background: #000;
+color:gold;
+margin: 8px;
+padding: 5px;
+
+}
+td{size: 28px;
+background-color: rgb(218, 184, 32);
+padding: 12px;
+margin: 10px;
+
+}
+
+
+
+
+
         /* footer item */
     #footerId{ color: rgb(241, 234, 237);
     
         font-size: 12px;
-       
+        text-align: center;
         background-color: gold;
         border: black solid 2px;
-    
-        position: fixed;
+        display: flex;
+        position:fixed;
         bottom: 0;
         width: 100%;
       /* align-items: center; */
@@ -72,8 +101,10 @@ nav a{
           border-radius: 50%; 
         } 
       #copyRightText{
-  text-align: center;
-  position: relative;
+  
+  position: fixed;
+  margin-left: 40%;
+  margin-bottom: 8px;
   size: 19px;
   color: #000;
   bottom:0; 

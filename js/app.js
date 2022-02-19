@@ -9,8 +9,9 @@ function employeeInformation(employeeID, fullName, department, level, personalIm
     this.department = department;
     this.level = level;
     this.personalImageURL = personalImageURL;
+     listOfEmployee.push(this);
     this.salary = 0;
-    listOfEmployee.push(this);
+   
 
 }
 
@@ -38,14 +39,6 @@ employeeInformation.prototype.salaryNumber = function () {
 
 }
 
-
-// let Ghazi_Samer = new employeeInformation (randId() ,"Ghazi Samer" , "Administration ", "senior" ,"URL");
-// let Lana_Ali = new employeeInformation (randId() ,"Lana Ali" , "Finance ", "senior" ,"URL");
-// let Tamara_Ayoub = new employeeInformation (randId() ,"Tamara Ayoub" , "Marketing ", "senior" ,"URL");
-// let Safi_Walid = new employeeInformation (1002 ,"Safi Walid" , "Administration ", "mid-senior" ,"URL");
-// let Omar_Zaid = new employeeInformation (1004 ,"Omar Zaid" , "Development ", "senior" ,"URL");
-// let Rana_Saleh = new employeeInformation (1005 ,"Rana Saleh" , "Development ", "junior" ,"URL");
-// let Hadi_Ahmad = new employeeInformation (1006 ,"Hadi Ahmad" , "Finance ", "mid-senior" ,"URL");
 
 
 let main1 = document.getElementById("output");
@@ -154,8 +147,11 @@ function addEmployeeData(event) {
     // console.log(fullName1)
 
     let newEmp = new employeeInformation(0, fullName1, department1, level, personalImageURL)
+   
     newEmp.render2();
-    // console.log("bass");
+         addDataItem(newEmp);
+        //  getAllData();
+    // console.log("bagetJson");
 }
 
 
@@ -204,3 +200,64 @@ employeeInformation.prototype.showEmpData = function () {
     main1.appendChild(divToShow);
 
 }
+
+
+//localStorage functions
+////////////////////////////////////////////////////////////////
+function addDataItem(newEmp){
+   let upData =   JSON.stringify(newEmp)
+    
+    // console.log(newEmp.employeeID)
+    localStorage.setItem(newEmp.employeeID,upData);
+
+
+}
+
+function getAllData(){
+
+    var xxx = Object.keys(localStorage)
+   
+    var getJson ;
+        // console.log(xxx);
+        // console.log(xxx.length);
+for (let i = 0 ;i<xxx.length;i++){
+
+getJson=JSON.parse(localStorage.getItem(xxx[i]))
+
+// console.log(getJson);
+
+var empFix= new employeeInformation(getJson.employeeID ,getJson.fullName ,getJson.department ,getJson.level ,getJson.personalImageURL)
+empFix.salary =getJson.salary;
+// console.log(getJson.fullName);
+   
+}
+
+
+
+    //  (var a in localStorage) {
+        // console.log(a, ' = ', localStorage[a]);
+// let aa = localStorage.getItem(a)
+// let getJson = JSON.parse(aa)
+// /console.log(a);
+
+// console.log(aa);
+// console.log(getJson);
+//()
+}
+function renderFromLocalStorge(){
+
+getAllData();
+if(listOfEmployee.length !=null){
+for(let i =0 ;i<listOfEmployee.length;i++){
+listOfEmployee[i].showEmpData();
+
+}
+
+}}
+
+
+renderFromLocalStorge()
+// }
+
+//////////////////////////////////////////////////////////////////
+
